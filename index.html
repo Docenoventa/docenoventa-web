@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
 <style>
 html{scroll-behavior:smooth} body{margin:0;background:#F4F2ED} *{box-sizing:border-box}
-a{color:#0E1A2B} a:hover{opacity:.85} a:focus-visible{outline:3px solid #E4572E;outline-offset:3px}
+a{color:#0E1A2B} a:hover{opacity:.85} a:focus-visible,button:focus-visible{outline:3px solid #0E1A2B;outline-offset:3px} input:focus,select:focus,textarea:focus{outline:3px solid #0E1A2B;outline-offset:0}
 section{scroll-margin-top:16px}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 </style>
@@ -261,16 +261,42 @@ section{scroll-margin-top:16px}
 </section>
 
 <section id="contacto" style="background: #E4572E; color: #0E1A2B; padding: 104px max(16px, 4vw)">
-<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 40px">
-<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 56px">
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
 <div style="font-size: 14px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase">Contacto</div>
 <h2 style="margin: 0; font-size: clamp(36px, 5.4vw, 72px); font-weight: 800; line-height: 1.02; text-wrap: balance">Hablemos antes de que hablen de ti.</h2>
-</div>
-<div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 10px; font-size: 18px">
+<p style="margin: 0; font-size: 19px; line-height: 1.6; max-width: 460px">Cuéntanos qué necesitas y te contactamos en menos de 24 horas hábiles.</p>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 18px">
 <a href="tel:+525561941148" style="font-size: 26px; font-weight: 800; color: #0E1A2B; text-decoration: none">55 6194 1148</a>
 <a href="mailto:contacto@docenoventa.com" style="font-weight: 600; color: #0E1A2B">contacto@docenoventa.com</a>
 <div style="font-weight: 600">@docenoventa en redes sociales</div>
 </div>
+</div>
+<form action="https://formsubmit.co/contacto@docenoventa.com" method="POST" style="flex: 1.3 1 420px; min-width: 0; background: #F4F2ED; padding: clamp(24px, 4vw, 44px); display: flex; flex-direction: column; gap: 18px">
+<input type="hidden" name="_subject" value="Nuevo contacto desde docenoventa.com">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://www.docenoventa.com/gracias.html">
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px">
+<label for="f-nombre" style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0E1A2B">Nombre<input id="f-nombre" name="Nombre" type="text" required autocomplete="name" style="font:inherit;font-size:17px;font-weight:400;letter-spacing:0;text-transform:none;padding:13px 14px;border:1.5px solid #9AA3AE;background:#FFFFFF;color:#0E1A2B;border-radius:0;width:100%"></label>
+<label for="f-empresa" style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0E1A2B">Empresa u organización<input id="f-empresa" name="Empresa" type="text" autocomplete="organization" style="font:inherit;font-size:17px;font-weight:400;letter-spacing:0;text-transform:none;padding:13px 14px;border:1.5px solid #9AA3AE;background:#FFFFFF;color:#0E1A2B;border-radius:0;width:100%"></label>
+<label for="f-correo" style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0E1A2B">Correo<input id="f-correo" name="email" type="email" required autocomplete="email" style="font:inherit;font-size:17px;font-weight:400;letter-spacing:0;text-transform:none;padding:13px 14px;border:1.5px solid #9AA3AE;background:#FFFFFF;color:#0E1A2B;border-radius:0;width:100%"></label>
+<label for="f-tel" style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0E1A2B">Teléfono<input id="f-tel" name="Teléfono" type="tel" autocomplete="tel" style="font:inherit;font-size:17px;font-weight:400;letter-spacing:0;text-transform:none;padding:13px 14px;border:1.5px solid #9AA3AE;background:#FFFFFF;color:#0E1A2B;border-radius:0;width:100%"></label>
+</div>
+<label for="f-servicio" style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0E1A2B">¿En qué te podemos ayudar?
+<select id="f-servicio" name="Servicio" required style="font:inherit;font-size:17px;font-weight:400;letter-spacing:0;text-transform:none;padding:13px 14px;border:1.5px solid #9AA3AE;background:#FFFFFF;color:#0E1A2B;border-radius:0;width:100%">
+<option value="">Elige una opción</option>
+<option>Huella digital</option>
+<option>Comunicación institucional</option>
+<option>Manejo de crisis</option>
+<option>Comunicación política</option>
+<option>Publicidad y medios</option>
+<option>Otro</option>
+</select></label>
+<label for="f-mensaje" style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0E1A2B">Mensaje<textarea id="f-mensaje" name="Mensaje" rows="5" required style="font:inherit;font-size:17px;font-weight:400;letter-spacing:0;text-transform:none;padding:13px 14px;border:1.5px solid #9AA3AE;background:#FFFFFF;color:#0E1A2B;border-radius:0;width:100%"></textarea></label>
+<button type="submit" style="font:inherit;font-size:17px;font-weight:700;background:#0E1A2B;color:#F4F2ED;border:0;padding:17px 28px;cursor:pointer;align-self:flex-start">Enviar mensaje</button>
+<p style="margin:0;font-size:14px;line-height:1.5;color:#3A4452">Tus datos solo se usan para responder a tu mensaje.</p>
+</form>
 </div>
 </section>
 
